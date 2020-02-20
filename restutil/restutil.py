@@ -24,7 +24,7 @@ class RestUtil(object):
         """
         url = self.urlmaker.url_for('fred', 'historical_rate', year=year, month=month, term=term)
         response = self.get_response(url)
-        return response.json()
+        return response.json()['data']['response']
 
     def get_response(self, url: str):
         """
