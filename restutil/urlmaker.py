@@ -28,6 +28,7 @@ class UrlMaker(object):
             patterns = self.__get_service_patterns(url)
         if patterns is None:
             raise Exception(f"No patterns exist for {service} {query}")
+        self.__to_cache(url, patterns)
 
         # The form of URL for retrieving data..
         url = f'{self.__url}/{service}/{query}/'
