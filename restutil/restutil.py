@@ -6,8 +6,8 @@ from urlmaker import UrlMaker
 
 
 class RestUtil(object):
-    def __init__(self, api_key: str):
-        self.urlmaker = UrlMaker(api_key, host='localhost')
+    def __init__(self, api_key: str, host: str = 'localhost'):
+        self.urlmaker = UrlMaker(api_key, host=host)
         self.auth = (api_key, None)
 
     def average_mortage_rate(self, year: int, month: int = 6, term: int = 30) -> dict:
