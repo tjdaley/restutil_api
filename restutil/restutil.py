@@ -7,7 +7,7 @@ from urlmaker import UrlMaker
 
 class RestUtil(object):
     def __init__(self, api_key: str):
-        self.urlmaker = UrlMaker(api_key, host='192.168.1.81')
+        self.urlmaker = UrlMaker(api_key, host='localhost')
         self.auth = (api_key, None)
 
     def average_mortage_rate(self, year: int, month: int = 6, term: int = 30) -> dict:
@@ -23,10 +23,10 @@ class RestUtil(object):
           (dict): Result Set the interest rate
         """
         url = self.urlmaker.url_for('fred', 'historical_rate', year=year, month=month, term=term)
-        response = self.get_response(url)
+        response = self.__get_response(url)
         return response.json()['data']['response']
 
-    def get_response(self, url: str):
+    def __get_response(self, url: str):
         """
         Retrieve response from server, with retry logic.
 
@@ -51,7 +51,7 @@ class RestUtil(object):
 
 
 def main():
-    ru = RestUtil('tjdaley')
+    ru = RestUtil('my_access_key')
     for i in range(5):
         print(ru.average_mortage_rate(2010, i+1, 15))
 
