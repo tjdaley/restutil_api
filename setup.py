@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="restutil-tjdaley",  # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     author="Thomas J. Daley",
     author_email="tdaley@daleyfound.org",
     description="API for accessing my restutil service",
@@ -15,8 +15,10 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
+        "Intended Audience :: Legal Industry",
+        "Natural Language :: English",
     ],
     python_requires='>=3.6',
 )
