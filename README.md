@@ -18,6 +18,39 @@ HTTP interface will change in the future, but this API will remain the same.
 
 ## Implemented Utilities
 
+### Attorney Search
+*AttorneySearch* is a class for retrieving information about attorneys from
+public data sources given a bar number and state. For now, 'TX' is the only
+state that is implemented.
+
+**Example**
+```python
+searcher = AttorneySearch()
+atty = searcher.find('24059643')
+print(json.dumps(atty, indent=4))
+>>>
+{
+    "name": "Thomas James Daley",
+    "bar_number": "24059643",
+    "license_date": "11/02/2007",
+    "primary_practice": "Plano , Texas",
+    "address": "825 Watters Creek Blvd Ste 395. Allen, TX 75013."
+}
+```
+
+This class scrapes the State Bar of Texas web site, which is not constructed for
+easy scraping of data. Therefore, sometimes some junk appears at the end of the
+address field.
+
+**Methods**
+*find* - Retrieve name, license date, primary practice location, and address for
+a given attorney.
+
+| arg | Description | Notes |
+|-----|-------------|-------|
+| bar_number | State Bar number | str. Required |
+| state | Two-letter abbreviation for state we are searching in. | str. Values={'TX'}. Default='TX'. |
+
 ### Historical Mortgage Interest Rates
 *MortageRates* is a class for retrieving historical interest rates given a
 year, month, and term of loan in years (5, 15, or 30).
@@ -44,4 +77,5 @@ the Federal Reserve Bank of St. Louis for the given year, month, and term.
 |-----|-------------|-------|
 | year | Year being inquired about. | int. Range 1971-current. Required |
 | month | Month being inquired about. | int. Range 1-12. Default=6 |
-| term | Loan term in years. | int. Values=[5, 15, 30]. Default=30 |
+| term | Loan term in years. | int. Values={5, 15, 30}. Default=30 |
+
