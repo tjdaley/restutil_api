@@ -34,7 +34,7 @@ print(mr.average_mortgage_rate(year=2020, month=1, term=30))
 Instantiating MortgageRates requires an API_KEY and an optional address of
 the utility server providing data to the API. API_KEY values can be obtained
 from the package author by email request. Or, you can install the server
-package on your site by cloning the (server project)[https://github.com/tjdaley/restutil].
+package on your site by cloning the [server project](https://github.com/tjdaley/restutil).
 
 **Methods**
 *average_mortgage_rate* - Retrieves the average mortgage interest rate from
