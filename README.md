@@ -11,11 +11,9 @@ Higher-level API for accessing restul services.
 <p align="center">
     <a href="#purpose">Purpose</a> &bull;
     <a href="#installation">Installation</a> &bull;
-    <a href="#utilities">Utilities</a> &bull;
+    <a href="#implemented-utilities">Utilities</a> &bull;
     <a href="#author">Author</a>
 </p>
-
-<a href="#purpose"></a>
 
 ## Purpose
 I have developed a scattering of utilities that retreive various pieces of
@@ -32,14 +30,10 @@ services by providing a level of abstraction between using the services and
 the underlying implementation of the services. E.G. it is very likely that the
 HTTP interface will change in the future, but this API will remain the same.
 
-<a href="#installation"></a>
-
 ## Installation
 ```
 pip install restutil-tjdaley
 ```
-
-<a href="#utilities"></a>
 
 ## Implemented Utilities
 
@@ -104,8 +98,7 @@ the Federal Reserve Bank of St. Louis for the given year, month, and term.
 | month | Month being inquired about. | int. Range 1-12. Default=6 |
 | term | Loan term in years. | int. Values={5, 15, 30}. Default=30 |
 
-<a href="#author"></a>
-
 ## Author
+
 Thomas J. Daley, J.D. is an active family law litigation attorney practicing primarily in Collin County, Texas, an occassional mediator, and 
 software developer.
