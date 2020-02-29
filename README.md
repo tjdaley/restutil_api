@@ -5,7 +5,7 @@ Higher-level API for accessing restul services.
     <a href="https://github.com/tjdaley/restutil_api/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/tjdaley/restutil_api"></a>
     <a href="https://github.com/tjdaley/restutil_api/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/tjdaley/restutil_api"></a>
     <a href="https://github.com/tjdaley/restutil_api/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/tjdaley/restutil_api"><a>
-    <a href="https://github.com/tjdaley/restutil_api/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/tjdaley/restutil_api"></a>
+    <img alt="PyPI - License" src="https://img.shields.io/pypi/l/restutil-tjdaley">
     <img alt="Stage: Development" src="https://img.shields.io/badge/stage-Development-orange">
 </p>
 <p align="center">
