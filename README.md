@@ -1,6 +1,29 @@
 # restutil_api
 Higher-level API for accessing restul services.
 
+<p align="center">
+    <a href="https://github.com/tjdaley/restutil_api/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/tjdaley/restutil_api"></a>
+    <a href="https://github.com/tjdaley/restutil_api/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/tjdaley/restutil_api"></a>
+    <a href="https://github.com/tjdaley/restutil_api/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/tjdaley/restutil_api"><a>
+    <a href="https://github.com/tjdaley/restutil_api/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/tjdaley/restutil_api"></a>
+    <img alt="Stage: Development" src="https://img.shields.io/badge/stage-Development-orange">
+</p>
+<p align="center">
+    <a href="#purpose">Purpose</a> &bull;
+    <a href="#installation">Installation</a> &bull;
+    <a href="#utilities">Utilities</a> &bull;
+    <a href="#author">Author</a>
+</p>
+
+<a href="#purpose"></a>
+# Installation
+
+```
+pip install https://github.com/tjdaley/restutil
+```
+
+<a href="#purpose"></a>
+
 ## Purpose
 I have developed a scattering of utilities that retreive various pieces of
 information from around the Internet such as average mortgage rates for a
@@ -15,6 +38,15 @@ services and in some ways future-proofs the applications that consume these
 services by providing a level of abstraction between using the services and
 the underlying implementation of the services. E.G. it is very likely that the
 HTTP interface will change in the future, but this API will remain the same.
+
+<a href="#installation"></a>
+
+## Installation
+```
+pip install restutil-tjdaley
+```
+
+<a href="#utilities"></a>
 
 ## Implemented Utilities
 
@@ -79,3 +111,8 @@ the Federal Reserve Bank of St. Louis for the given year, month, and term.
 | month | Month being inquired about. | int. Range 1-12. Default=6 |
 | term | Loan term in years. | int. Values={5, 15, 30}. Default=30 |
 
+<a href="#author"></a>
+
+## Author
+Thomas J. Daley, J.D. is an active family law litigation attorney practicing primarily in Collin County, Texas, an occassional mediator, and 
+software developer.
