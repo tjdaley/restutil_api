@@ -16,13 +16,6 @@ Higher-level API for accessing restul services.
 </p>
 
 <a href="#purpose"></a>
-# Installation
-
-```
-pip install https://github.com/tjdaley/restutil
-```
-
-<a href="#purpose"></a>
 
 ## Purpose
 I have developed a scattering of utilities that retreive various pieces of
