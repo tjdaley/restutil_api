@@ -39,7 +39,13 @@ class BaseUtility(object):
             response = requests.get(url, auth=self.auth)
             if response.status_code == 401:
                 raise Exception(response.text)
-            response_json = response.json()
+            try:
+                response_json = response.json()
+            except Exception as e:
+                message = f"Error in response: {response.text}: {str(e)}"
+                print(message)
+                response_json = {'message': message, 'code': "999"}
+                break
             if response_json['success'] is True:
                 return response
             if response_json['code'] == 'ERR_RATE_LIMIT' and rate_limit_retries_remaining > 0:
